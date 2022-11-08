@@ -5,7 +5,7 @@
     --middle-right-text-size: 25px;
     --middle-text-color: #d3d4d4;
     --button-background: #2061ac;
-    --button-radius: 5px;
+    --button-radius: 3px;
     --button-blue-padding: 10px 20px;
     --button-green-padding: 12px 48px;
     --button-hover-background: #fff;
@@ -31,8 +31,10 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
 }
 
+/* ?navbar */
 nav {
     background: #0005;
     height: 70px;
@@ -106,4 +108,49 @@ nav button {
 nav button:hover {
     background: var(--button-hover-background);
     color: var(--button-background);
+}
+
+/* ?hero text */
+div.hero-text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+}
+
+.hero-title {
+    font-size: var(--hero-title-size);
+}
+
+.text {
+    font-size: var(--hero-text-size);
+    font-weight: 300;
+}
+
+button.see-plans {
+    border: none;
+    background: var(--button-plans-background);
+    color: #fff;
+    padding: var(--button-green-padding);
+    margin-top: 1em;
+    font-size: 25px;
+    -webkit-border-radius: var(--button-radius);
+    -moz-border-radius: var(--button-radius);
+    -ms-border-radius: var(--button-radius);
+    -o-border-radius: var(--button-radius);
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+button.see-plans:hover {
+    background: var(--button-hover-background);
+    color: var(--button-plans-background);
 }
